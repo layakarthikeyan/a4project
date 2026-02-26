@@ -19,11 +19,11 @@ body {
 }
 
 img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 16px auto;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -41,13 +41,6 @@ a:hover { text-decoration: underline; }
 }
 
 .header-inner {
-  /* TODO A (Flexbox):
-     Make the brand appear on the left and the navigation on the right.
-     Requirements:
-       - Use flexbox
-       - Center items vertically
-       - Put space between left and right
-  */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,9 +53,6 @@ a:hover { text-decoration: underline; }
 }
 
 .brand .dot {
-  /* TODO B (Color):
-     Make the dot a light blue accent color (choose a readable blue).
-  */
   color: #3a88a8;
   font-weight: 700;
 }
@@ -74,7 +64,6 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.08em;
   color: #444;
 }
-
 
 
 h1, h2, h3 {
@@ -93,17 +82,6 @@ a:hover {
 
 /* ===== Hero ===== */
 .hero {
-  /* TODO C (Background image hero):
-     Turn this into a hero banner with a background image.
-     Requirements:
-       - Use a background image URL (use the one below)
-       - Make it cover the area and center it
-       - Add a light overlay so text is readable (hint: use a linear-gradient + image)
-       - Set a minimum height (e.g., 360px)
-  */
-  /* My image:
-     https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60
-  */
   background:
     linear-gradient(
       rgba(255, 255, 255, 0.85),
@@ -118,20 +96,12 @@ a:hover {
 }
 
 .hero-content {
-  /* TODO D (Center content):
-     Center the hero text horizontally.
-     Add vertical padding so it doesn't feel cramped.
-  */
   text-align: center;
   padding: 72px 20px;
 }
 
 .hero h1 {
   margin: 0;
-  /* TODO E (Typography):
-     Make the headline large and uppercase.
-     (e.g., font-size around 42–48px, text-transform uppercase)
-  */
   font-size: 46px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -139,10 +109,6 @@ a:hover {
 
 .hero-subhead {
   margin: 6px 0 22px;
-  /* TODO F (Typography):
-     Make this slightly smaller than h1 and a softer color.
-     (e.g., font-size ~20–24px; color #555)
-  */
   font-size: 22px;
   color: #555;
 }
@@ -161,20 +127,12 @@ a:hover {
 }
 
 .btn-dark {
-  /* TODO G (Button styling):
-     Make this a dark filled button with white text.
-     (e.g., background #333; color #fff)
-  */
   background: #333;
   color: #fff;
   border: 2px solid #333;
 }
 
 .btn-outline {
-  /* TODO H (Button styling):
-     Make this an outlined button with a blue border and matching text.
-     (e.g., border: 2px solid ...; color: ...; background: transparent)
-  */
   border: 2px solid #3a88a8;
   color: #3a88a8;
   background: transparent;
@@ -186,20 +144,11 @@ a:hover {
 }
 
 .features-grid {
-  /* TODO I (Layout):
-     Arrange the three feature blocks in a row (desktop).
-     Requirements:
-       - Use flexbox
-       - Add a gap between items (e.g., 26px)
-  */
   display: flex;
   gap: 26px;
 }
 
 .feature {
-  /* TODO J (Sizing / alignment):
-     Make each feature take equal width and center its text.
-  */
   flex: 1;
   text-align: center;
 }
@@ -257,21 +206,11 @@ a:hover {
 }
 
 .secondary-grid {
-  /* TODO K (Layout):
-     Put the two cards next to each other on desktop.
-     Requirements:
-       - Use flexbox
-       - Add a gap (e.g., 26px)
-  */
   display: flex;
   gap: 26px;
 }
 
 .card {
-  /* TODO L (Card styling):
-     Give each card a border and make it take equal width.
-     (Hint: flex: 1; border: 1px solid #eee)
-  */
   flex: 1;
   border: 1px solid #eee;
   background: #fff;
@@ -298,11 +237,6 @@ a:hover {
 
 .card-image {
   min-height: 160px;
-  /* TODO M (Image block):
-     Make the card image behave like a background image:
-       - cover
-       - centered
-  */
   background-size: cover;
   background-position: center;
 }
@@ -322,9 +256,6 @@ a:hover {
 }
 
 .cta-inner {
-  /* TODO N (Center CTA):
-     Center the CTA text and button.
-  */
   text-align: center;
 }
 
@@ -340,13 +271,6 @@ a:hover {
 }
 
 .footer-inner {
-  /* TODO O (Footer layout):
-     Arrange footer-left on the left and footer link columns on the right.
-     Requirements:
-       - Use flexbox
-       - Add a gap (e.g., 24px)
-       - Space items out (left/right)
-  */
   display: flex;
   justify-content: space-between;
   gap: 24px;
@@ -378,4 +302,107 @@ a:hover {
   font-size: 12px;
   color: #666;
   margin: 6px 0;
+}
+
+main {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 36px 0 64px;
+}
+
+main > section {
+  padding: 44px 0;
+  border-bottom: 1px solid #eee;
+}
+
+main > section:last-child {
+  border-bottom: none;
+}
+
+main > section > h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1f3a4d;
+}
+
+section h3 {
+  margin: 22px 0 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1f3a4d;
+}
+
+p {
+  max-width: 760px;
+  margin: 10px auto;
+  color: #444;
+}
+
+#hero .hero-text a,
+#cta a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#hero .hero-text a:hover,
+#cta a:hover {
+  opacity: 0.92;
+  text-decoration: none;
+}
+
+.hero-image {
+  max-width: 820px;
+  margin: 24px auto 0;
+}
+
+.feature-image {
+  max-width: 760px;
+  margin: 18px auto;
+}
+
+.image-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#tips ul {
+  max-width: 520px;
+  margin: 12px auto;
+  padding-left: 18px;
+  text-align: left;
+}
+
+#tips li {
+  margin: 6px 0;
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  padding: 28px 0;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+footer a {
+  color: #3a88a8;
 }
