@@ -12,27 +12,28 @@
 
 <body>
 
-  <header>
-    <h1>Bay Area Travel Guide</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Bay Area Travel Guide<span class="dot">.</span></div>
 
-    <nav>
-      <ul>
-        <li><a href="#highlights">Highlights</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#tips">Travel Tips</a></li>
-        <li><a href="#footer">Links</a></li>
-      </ul>
-    </nav>
+      <nav class="site-nav">
+        <a href="#highlights">Highlights</a>
+        <a href="#featured">Featured</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="#footer">Links</a>
+      </nav>
+    </div>
   </header>
 
   <main>
 
-    <section id="hero">
-    <div class="hero-text">
-        <h2>Explore the San Francisco Bay Area</h2>
-        <p>Iconic landmarks, diverse neighborhoods, and unforgettable experiences.</p>
-        <p><a href="#highlights">Get Started</a></p>
-    </div>
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <h1>Explore the San Francisco Bay Area</h1>
+        <p class="hero-subhead">Iconic landmarks, diverse neighborhoods, and unforgettable experiences.</p>
+        <a class="btn btn-dark" href="#highlights">Get Started</a>
+      </div>
+    </section>
 
     <img
         src="sfo_skyline.jpg"
@@ -55,12 +56,6 @@
       alt="The Golden Gate Bridge spanning San Francisco Bay on a clear day"
       class="feature-image"
     >
-
-    <!-- <img
-      src="images/sfo_alcatraz.webp"
-      alt="Alcatraz Island surrounded by water in San Francisco Bay"
-      class="feature-image"
-    > -->
   </div>
 </section>
 
